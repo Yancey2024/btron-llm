@@ -27,8 +27,12 @@ def find_min_y(file_path):
         result.append((int(min_y_row['x']), int(min_y_row['y'])))
         i += 1
 
+    # 将结果保存到peak.csv
+    result_df = pd.DataFrame(result, columns=['x', 'y'])
+    result_df.to_csv('peak.csv', index=False)
+
     print(result)
     return result
 
 # 使用示例
-find_min_y('/private/workspace/cy/btron/output.csv')
+find_min_y('output.csv')
