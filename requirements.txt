@@ -1,1 +1,5 @@
-PyMuPDF
+opencv-python
+numpy
+pandas
+pymupdf
+Pillow

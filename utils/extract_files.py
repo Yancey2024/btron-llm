@@ -55,9 +55,3 @@ def batch_process_pdfs(files_dir, text_dir, pics_dir):
             pdf_basename = os.path.splitext(filename)[0]
             text_output_path = os.path.join(text_dir, f"{pdf_basename}.txt")
             extract_text_and_images(pdf_path, text_output_path, pics_dir, pdf_basename)
-
-if __name__ == "__main__":
-    files_dir = "/private/workspace/cy/btron/files"  # PDF 文件存放的文件夹
-    text_dir = "/private/workspace/cy/btron/text"    # 文本输出的文件夹
-    pics_dir = "/private/workspace/cy/btron/pics"    # 图片保存的文件夹
-    batch_process_pdfs(files_dir, text_dir, pics_dir)
