@@ -39,7 +39,7 @@ def extract_text_and_images(pdf_path, text_output_path, pics_dir, pdf_basename):
     # 将文本信息保存到文件中
     with open(text_output_path, "w", encoding="utf-8") as f:
         f.write(all_text)
-    print(f"处理 {pdf_path} 成功，文本保存到 {text_output_path}")
+    # print(f"处理 {pdf_path} 成功，文本保存到 {text_output_path}")
 
 def batch_process_pdfs(files_dir, text_dir, pics_dir):
     # 如果输出目录不存在，则创建

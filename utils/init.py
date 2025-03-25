@@ -19,17 +19,17 @@ def delete_all_files_in_folders(folders):
 
             if os.path.isfile(file_path):
                 os.remove(file_path)  # 删除文件
-                print(f"已删除文件：{file_path}")
+                # print(f"已删除文件：{file_path}")
             elif os.path.isdir(file_path):
                 shutil.rmtree(file_path)  # 删除子文件夹及其内容
-                print(f"已删除文件夹及其内容：{file_path}")
+                # print(f"已删除文件夹及其内容：{file_path}")
 
-if __name__ == "__main__":
-    # 直接定义需要清空的文件夹路径列表
-    folder_paths = [
-        '/path/to/folder1',
-        '/path/to/folder2',
-        '/path/to/folder3'
-    ]
+# if __name__ == "__main__":
+#     # 直接定义需要清空的文件夹路径列表
+#     folder_paths = [
+#         '/path/to/folder1',
+#         '/path/to/folder2',
+#         '/path/to/folder3'
+#     ]
     
-    delete_all_files_in_folders(folder_paths)
+#     delete_all_files_in_folders(folder_paths)

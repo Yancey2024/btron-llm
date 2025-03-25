@@ -56,7 +56,7 @@ def process_multiple_csv_files(input_folder: str, output_folder: str):
         if filename.endswith('.csv'):
             input_file = os.path.join(input_folder, filename)
             output_file = os.path.join(output_folder, f"processed_{filename}")
-            print(f"Processing file: {filename}")
+            # print(f"Processing file: {filename}")
             process_csv(input_file, output_file)
 
 # 调用函数处理文件夹中的所有CSV文件

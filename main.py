@@ -31,4 +31,5 @@ utils.rename.rename_images(pics_dir)  # 重命名图片
 utils.segment.extract_rectangle(pics_dir, segmented_dir)  # 切割图片，只保留频谱曲线部分
 utils.extract_blue.process_folder(segmented_dir, extract_blue_dir)  # 提取蓝色频谱曲线
 utils.detect_peak.process_multiple_csv_files(extract_blue_dir, peak_blue_dir)  # 检测频谱曲线的峰值
+print("-" * 50)  # 分隔线
 utils.calculate.process_directory(peak_blue_dir, final_result_dir)  # 计算峰值的频率和幅值，结果保存到final_result文件夹里

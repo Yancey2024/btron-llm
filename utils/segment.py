@@ -10,7 +10,7 @@ def extract_rectangle(input_folder, output_folder):
     image_files = [f for f in os.listdir(input_folder) if f.lower().endswith(('png', 'jpg', 'jpeg'))]
 
     if not image_files:
-        print("没有找到图片")
+        # print("没有找到图片")
         return
 
     for file_name in image_files:
@@ -20,7 +20,7 @@ def extract_rectangle(input_folder, output_folder):
         # 读取图像
         image = cv2.imread(input_path)
         if image is None:
-            print(f"无法读取图像: {file_name}")
+            # print(f"无法读取图像: {file_name}")
             continue
 
         # 转换为灰度图像
@@ -35,7 +35,7 @@ def extract_rectangle(input_folder, output_folder):
         contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
         if len(contours) == 0:
-            print(f"未找到符合条件的矩形框: {file_name}")
+            # print(f"未找到符合条件的矩形框: {file_name}")
             continue
 
         # 选择最大轮廓作为边框
@@ -49,7 +49,7 @@ def extract_rectangle(input_folder, output_folder):
         h -= 2
 
         if w <= 0 or h <= 0:
-            print(f"裁剪后无有效区域: {file_name}")
+            # print(f"裁剪后无有效区域: {file_name}")
             continue
 
         # 裁剪矩形框内的区域
@@ -57,7 +57,7 @@ def extract_rectangle(input_folder, output_folder):
 
         # 保存结果
         cv2.imwrite(output_path, cropped_image)
-        print(f"裁剪完成，结果保存至: {output_path}")
+        # print(f"裁剪完成，结果保存至: {output_path}")
 
 # 使用示例
 # extract_rectangle('input_folder_path', 'output_folder_path')

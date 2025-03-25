@@ -9,7 +9,7 @@ def clean_name(filename):
 
 def rename_images(folder_path):
     if not os.path.isdir(folder_path):
-        print("指定的路径不是文件夹")
+        # print("指定的路径不是文件夹")
         return
     
     images = [f for f in os.listdir(folder_path) if f.lower().endswith(('jpg', 'jpeg', 'png', 'bmp'))]
@@ -21,7 +21,7 @@ def rename_images(folder_path):
         old_path = os.path.join(folder_path, filename)
         new_path = os.path.join(folder_path, new_name)
         os.rename(old_path, new_path)
-        print(f"重命名: {filename} -> {new_name}")
+        # print(f"重命名: {filename} -> {new_name}")
 
 # 使用示例
 # folder_path = "C:/your/folder/path"  # 替换为你的文件夹路径

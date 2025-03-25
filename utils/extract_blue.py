@@ -7,12 +7,12 @@ def extract_blue_pixels(image_path, output_csv_path):
     # 读取图像
     image = cv2.imread(image_path)
     if image is None:
-        print(f"无法读取图像: {image_path}")
+        # print(f"无法读取图像: {image_path}")
         return
 
     height, width, _ = image.shape
     if height != 280 or width != 555:
-        print(f"图像尺寸不符: {image_path}")
+        # print(f"图像尺寸不符: {image_path}")
         return
 
     blue_pixels = []
@@ -38,7 +38,7 @@ def extract_blue_pixels(image_path, output_csv_path):
         writer = csv.writer(csvfile)
         writer.writerow(['x', 'y'])
         writer.writerows(blue_pixels)
-    print(f"已保存蓝色像素坐标到: {output_csv_path}")
+    # print(f"已保存蓝色像素坐标到: {output_csv_path}")
 
 def process_folder(input_folder, output_folder):
     if not os.path.exists(output_folder):
