@@ -7,12 +7,12 @@ def extract_blue_pixels(image_path, output_csv_path):
     # 读取图像
     image = cv2.imread(image_path)
     if image is None:
-        # print(f"无法读取图像: {image_path}")
+        print(f"无法读取图像: {image_path}")
         return
 
     height, width, _ = image.shape
     if height != 280 or width != 555:
-        # print(f"图像尺寸不符: {image_path}")
+        print(f"图像尺寸不符: {image_path}")
         return
 
     blue_pixels = []

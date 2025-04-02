@@ -3,3 +3,5 @@ numpy
 pandas
 pymupdf
 Pillow
+flask
+flask_cors
